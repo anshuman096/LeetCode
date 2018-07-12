@@ -1,35 +1,37 @@
+/**
+ * 
+ */
 package org.anshuman.leetcode;
 
-import junit.framework.Test;
-import junit.framework.TestCase;
-import junit.framework.TestSuite;
+import static org.junit.Assert.*;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
 
 /**
- * Unit test for simple App.
+ * @author anshuman
+ *
  */
-public class Q001Test extends TestCase {
+public class Q001Test {
 	Q001 q1;
-	
-    /**
-     * Create the test case
-     *
-     * @param testName name of the test case
-     */
-    public Q001Test( String testName ) {
-        super( testName );
-        q1 = new Q001();
-    }
 
-    /**
-     * @return the suite of tests being tested
-     */
-    public static Test suite() {
-        return new TestSuite( Q001Test.class );
-    }
+	/**
+	 * @throws java.lang.Exception
+	 */
+	@Before
+	public void setUp() throws Exception {
+		q1 = new Q001();
+	}
 
-    /**
-     * Rigourous Test Cases :-)
-     */
+	/**
+	 * @throws java.lang.Exception
+	 */
+	@After
+	public void tearDown() throws Exception {
+	}
+
+	@Test
     public void testFail() {
         int[] nums = {2, 7, 11, 15};
         int target = 19;
@@ -37,7 +39,7 @@ public class Q001Test extends TestCase {
         assertTrue(solution[0] == solution[1]);
     }
     
-    
+    @Test
     public void testPass1() {
         int[] nums = {2, 7, 11, 15};
         int target = 9;
@@ -45,7 +47,7 @@ public class Q001Test extends TestCase {
         assertTrue(nums[solution[0]] + nums[solution[1]] == target);
     }
     
-    
+    @Test
     public void testPass2() {
     	int[] nums = {435, 23, 65, 22, 76, 567, 2212};
     	int target = 632;
@@ -53,12 +55,12 @@ public class Q001Test extends TestCase {
     	assertTrue(nums[solution[0]] + nums[solution[1]] == target);
     }
     
+    @Test
     public void testPass3() {
     	int[] nums = {-34, 43, -77, 25};
     	int target = -111;
     	int[] solution = q1.twoSum(nums, target);
     	assertTrue(nums[solution[0]] + nums[solution[1]] == target);
     }
-    
-    
+
 }
