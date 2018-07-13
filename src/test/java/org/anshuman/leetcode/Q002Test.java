@@ -1,8 +1,10 @@
 package org.anshuman.leetcode;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertNull;
+import static org.junit.Assert.assertTrue;
 
 import org.anshuman.utilities.ListNode;
+import org.anshuman.leetcode.Q002;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -45,7 +47,7 @@ public class Q002Test {
 	}
 	
 	@Test
-	public void carry() {
+	public void testCarry() {
 		ListNode numOne = new ListNode(5);
 		ListNode numTwo = new ListNode(6);
 		ListNode solution = q2.addTwoNumbers(numOne, numTwo);
@@ -54,7 +56,7 @@ public class Q002Test {
 	}
 	
 	@Test
-	public void multipleNodeNumbers() {
+	public void testMultipleNodeNumbers() {
 		ListNode hundredsOne = new ListNode(3);
 		ListNode tensOne = new ListNode(2);
 		ListNode onesOne = new ListNode(4);
