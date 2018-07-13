@@ -11,7 +11,7 @@ public class Q003Test {
 
 	@Before
 	public void setUp() throws Exception {
-		Q003 q3 = new Q003();
+		q3 = new Q003();
 	}
 
 	@After
@@ -22,7 +22,7 @@ public class Q003Test {
 	public void testPass() {
 		String str = "abcdabbccdef";
 		int longestSubStringLength = q3.lengthOfLongestSubstring(str);
-		assertTrue(longestSubStringLength == 3); //abc
+		assertTrue(longestSubStringLength == 4); //abc
 	}
 	
 	@Test
