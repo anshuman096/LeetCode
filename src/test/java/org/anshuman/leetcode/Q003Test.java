@@ -38,5 +38,12 @@ public class Q003Test {
 		int longestSubStringLength = q3.lengthOfLongestSubstring(str);
 		assertTrue(longestSubStringLength == 0);
 	}
+	
+	@Test
+	public void testAgainstSubSequence() {
+		String str = "pwwkew";
+		int longestSubStringLength = q3.lengthOfLongestSubstring(str);
+		assertTrue(longestSubStringLength == 3);
+	}
 
 }
