@@ -40,6 +40,11 @@ public class Q005Test {
 		assertTrue(result.equals("g")); //algorithm considers single letters as palindromes
 	}
 	
-	
+	@Test
+	public void testNoString() {
+		String test = "";
+		String result = q5.longestPalindrome(test);
+		assertTrue(result.equals(""));
+	}
 
 }
